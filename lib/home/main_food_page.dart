@@ -6,7 +6,7 @@ import 'package:delivery_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class MainFoodPage extends StatefulWidget {
-  MainFoodPage({Key? key}) : super(key: key);
+  const MainFoodPage({Key? key}) : super(key: key);
 
   @override
   State<MainFoodPage> createState() => _MainFoodPageState();
@@ -29,13 +29,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
             children: [
               Column(
                 children: [
-                  BigText(
+                  const BigText(
                     text: "Bangladesh",
                     color: AppColors.mainColor,
                     size: 30,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       SmallText(text: "narsingi", color: Colors.black54),
                       Icon(Icons.arrow_drop_down_circle_rounded),
                     ],
@@ -44,16 +44,16 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
               Center(
                 child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius15),
+                    color: AppColors.mainColor,
+                  ),
                   width: Dimensions.height45,
                   height: Dimensions.height45,
                   child: Icon(
                     Icons.search,
                     color: Colors.white,
                     size: Dimensions.iconSize24,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(Dimensions.radius15),
-                    color: AppColors.mainColor,
                   ),
                 ),
               )
@@ -64,7 +64,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
         // Expanded(
         //   child: SingleChildScrollView(
         //     child:
-        FoodPageBody(),
+        const FoodPageBody(),
         //   ),
         // ),
       ],

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
+@immutable
 class SmallText extends StatelessWidget {
-  Color? color;
+  final Color? color;
   final String text;
-  double size;
-  double heiht;
-  SmallText({
+  final double size;
+  final double heiht;
+  const SmallText({
     Key? key,
     this.color = const Color(0xFFccc7c5),
     required this.text,
